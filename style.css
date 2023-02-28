@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    color: white;
+
+}
+body{
+    background-color: #201F21;
+    position: relative;
+
+}
+#container{
+    display: flex;
+}
+#recent-logins{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    left: 20vw;
+    top:13vh;
+    margin-right: 30vw;
+}
+
+#recent-logins > #facebook{
+    height:70px;
+    width: 200px;
+    margin: -20px;
+}
+
+#recent-logins > #title{
+    font-size: 22px;
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+#recent-logins > #subtitle{
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+#cards{
+    display: flex;
+}
+
+#card-1, #card-2{
+    position: relative;
+    background-color: #131315;    
+    border-radius: 10px;
+    margin-right: 50px;
+    box-shadow: 0 5px 5px 3px rgb(0, 94, 255);
+
+}
+#card-1:hover, #card-2:hover{
+    box-shadow: 10px 10px rgb(0, 94, 255);
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+
+}
+
+#card-1-img, #card-2-img{
+    height: 160px;
+    width: 180px;
+    border-top-left-radius: 10px ;
+    border-top-right-radius: 10px ;
+}
+
+.username{
+    font-size: 18px;
+    line-height: 10px;
+    padding: 12px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.username:hover{
+    color: rgb(0, 94, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#cancel{
+    position: absolute;
+    left: 8px;
+    color: white;
+    top: 5px;
+    border-radius: 50%;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(0, 94, 255);
+    opacity: 0.5;
+}
+
+#card-1:hover #cancel{
+    background-color: rgb(0, 94, 255);
+    opacity: 1.0;
+    height: 25px;
+    width: 25px;
+    line-height: 22px;
+    top: -5px;
+    left: -5px; 
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+
+.login{
+    position: relative;
+    background-color: #201F21;
+    height: 350px;
+    width: 400px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    top: 20vh;
+    justify-content: flex-start;
+    padding: 10px 10px 20px 10px;
+    align-items: center;
+    box-shadow: 0 5px 5px 3px rgb(0, 94, 255);
+}
+
+
+.login > a{
+    margin: 18px 0;
+    text-decoration:none;
+    color:  rgb(0, 94, 255);
+}
+
+.login > a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+    color: darkblue;
+ }
+
+hr{
+    width: 94%;
+    height: 0.1%;
+    background-color: rgb(194, 193, 193);
+    border: none;
+}
+
+.input-group-1 > input[type=email], .input-group-2> input[type=password]{
+    position: relative;
+    height: 55%;
+    margin: 8px 0;
+    border-radius: 15px;
+    width: 100%;
+    border: 2px solid #EEEFF0; 
+    background: none;
+    padding: 1rem;
+    font-size:28px ;
+    font-weight: normal;
+    color: #f5f5f5;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2,1);
+    
+}
+
+
+label{
+    position: absolute;
+    margin-top: 6px;
+    left: 40px;
+    color: #e8e8e8;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2,1);
+}
+
+input:focus	~ label{
+    transform: translateY(-50%) scale(0.8);
+    padding: 2px 10px 2px 10px;
+    background-color: rgb(0, 94, 255);
+    color: white;
+    border-radius: 50px;
+
+}
+
+.input-group-1  > input[type=email]:focus, .input-group-2 > input[type=password]:focus{
+    outline: none;
+    border: 2.5px solid  rgb(0, 94, 255);
+    box-shadow: 0 0 5px #719ECE;
+    caret-color:  rgb(0, 94, 255);
+}
+
+#login-button{
+    background-color: rgb(0, 94, 255);
+    color: #FFFFFF;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    height: 100px;
+    font-weight: bold;
+    width: 92%;
+}
+
+#login-button:hover{
+    background-color: darkblue ;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#create-new-account{
+    background-color: #42b72a;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    height: 100px;
+    font-weight:bold;
+    width: 92%;
+    margin-top: 20px;
+}
+
+#create-new-account:hover{
+    background-color: darkgreen;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+
+p{
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    bottom: -55px;
+    font-weight: bold;
+}
+
+
+footer{
+    background-color: #131315;    
+    position: absolute;
+    bottom: 100;
+    width: 100vw;
+    padding: 20px;
+    font-size: 15px;
+    margin-top: 262px;
+    display: flex;
+    justify-content: center;
+    word-spacing: 10px;
+    list-style: 10px;
+}
+
+@media screen and (max-width:1114px){
+    #recent-logins{
+        left: 70px;
+        margin-right: 22vw;
+    }
+    .login{
+        right: 30px;
+    }
+}
+
+@media screen and (max-width:900px){
+    body{
+        height: 150vh;
+    }
+
+    #container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #recent-logins{
+        margin-right: 0;
+        align-items: center;
+        left: 0;
+        top: 20px;
+    }
+
+    #card-1{
+        margin-right: 5px;
+    }
+    
+    #card-2{
+        margin-left: 5px;
+        margin-right: 0;
+    }
+    .login{
+        text-align: center;
+        left: 0;
+        margin-right: 0;
+        margin-top: -30px;
+        top: 80px;
+    }
+    #recent-logins, .login{
+        position: relative;
+    }
+    footer{
+        position: absolute;
+        padding: 20px;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-height:670px) {
+    footer{
+        position: relative;
+        top: 100px;
+    }
+    
+}
+
